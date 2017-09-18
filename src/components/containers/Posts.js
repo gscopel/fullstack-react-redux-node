@@ -57,7 +57,7 @@ class Posts extends Component {
         <div className="table-wrapper">
           <table className="alt">
             <thead>
-              <tr><th>Image</th><th>Caption</th><th>From</th></tr>
+              <tr><th>Image</th><th>Caption</th></tr>
             </thead>
             <tbody>
               { (list == null) ? null :
@@ -66,7 +66,6 @@ class Posts extends Component {
                     <tr key={post.id}>
                       <td><img style={{width:64}} src={post.image} /></td>
                       <td>{post.caption}</td>
-                      <td style={{width:110}} >{post.profile.username}</td>
                     </tr>
 
                   )
@@ -91,7 +90,7 @@ class Posts extends Component {
 
   const dispatchToProps = (dispatch) => {
   return {
-    createPost: (params) => dispatch(actions.createPost(params)),
+    CreatePost: (params) => dispatch(actions.CreatePost(params)),
     fetchPosts: (params) => dispatch(actions.fetchPosts(params))
   }
   }

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { Posts, MapNavigation, Account } from '../containers'
-import { Sidebar, Footer } from '../view'
+
 
 
 class Home extends Component {
   render() {
     return(
       <div>
-        <header id="header" style={{padding:0}}>
+        <header id="header" style={{padding:8}}>
           <div className="inner">
-              <MapNavigation />
+              <MapNavigation style={{overflow:'visible'}} />
           </div>
         </header>
         <div id="main">

@@ -27233,8 +27233,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _containers = __webpack_require__(329);
 
-var _view = __webpack_require__(106);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27260,11 +27258,11 @@ var Home = function (_Component) {
         null,
         _react2.default.createElement(
           'header',
-          { id: 'header', style: { padding: 0 } },
+          { id: 'header', style: { padding: 8 } },
           _react2.default.createElement(
             'div',
             { className: 'inner' },
-            _react2.default.createElement(_containers.MapNavigation, null)
+            _react2.default.createElement(_containers.MapNavigation, { style: { overflow: 'visible' } })
           )
         ),
         _react2.default.createElement(
@@ -27443,11 +27441,6 @@ var Posts = function (_Component) {
                   'th',
                   null,
                   'Caption'
-                ),
-                _react2.default.createElement(
-                  'th',
-                  null,
-                  'From'
                 )
               )
             ),
@@ -27467,11 +27460,6 @@ var Posts = function (_Component) {
                     'td',
                     null,
                     post.caption
-                  ),
-                  _react2.default.createElement(
-                    'td',
-                    { style: { width: 110 } },
-                    post.profile.username
                   )
                 );
               })
@@ -27494,8 +27482,8 @@ var stateToProps = function stateToProps(state) {
 
 var dispatchToProps = function dispatchToProps(dispatch) {
   return {
-    createPost: function createPost(params) {
-      return dispatch(_actions2.default.createPost(params));
+    CreatePost: function CreatePost(params) {
+      return dispatch(_actions2.default.CreatePost(params));
     },
     fetchPosts: function fetchPosts(params) {
       return dispatch(_actions2.default.fetchPosts(params));
@@ -49629,12 +49617,12 @@ var Register = function (_Component) {
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'button',
-          { onClick: this.submitRegistration.bind(this) },
+          { className: 'button special small', onClick: this.submitRegistration.bind(this) },
           'Join'
         ),
         _react2.default.createElement(
           'button',
-          { onClick: this.submitLoginCredentials.bind(this) },
+          { className: 'button special small', style: { marginTop: 12 }, onClick: this.submitLoginCredentials.bind(this) },
           'Sign In'
         )
       );
@@ -50028,178 +50016,52 @@ exports.default = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+// import React, { Component } from 'react'
+//
+// class Sidebar extends Component{
+//   render(){
+//     return(
+//       // <header id="header">
+// 			// 	<div className="inner">
+// 			//
+// 			// 	</div>
+// 			// </header>
+//     )
+//   }
+// }
+//
+// export default Sidebar
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(6);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Sidebar = function (_Component) {
-  _inherits(Sidebar, _Component);
-
-  function Sidebar() {
-    _classCallCheck(this, Sidebar);
-
-    return _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).apply(this, arguments));
-  }
-
-  _createClass(Sidebar, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "header",
-        { id: "header" },
-        _react2.default.createElement("div", { className: "inner" })
-      );
-    }
-  }]);
-
-  return Sidebar;
-}(_react.Component);
-
-exports.default = Sidebar;
 
 /***/ }),
 /* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+// import React, { Component } from 'react'
+//
+// class Footer extends Component{
+//   render(){
+//     return(
+//       <footer id="footer">
+//         <div className="inner">
+//           <ul className="icons">
+//             <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+//             <li><a href="#" className="icon fa-github"><span className="label">Github</span></a></li>
+//             <li><a href="#" className="icon fa-dribbble"><span className="label">Dribbble</span></a></li>
+//             <li><a href="#" className="icon fa-envelope-o"><span className="label">Email</span></a></li>
+//           </ul>
+//           <ul className="copyright">
+//             <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+//           </ul>
+//         </div>
+//       </footer>
+//     )
+//   }
+// }
+//
+// export default Footer
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(6);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Footer = function (_Component) {
-  _inherits(Footer, _Component);
-
-  function Footer() {
-    _classCallCheck(this, Footer);
-
-    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-  }
-
-  _createClass(Footer, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "footer",
-        { id: "footer" },
-        _react2.default.createElement(
-          "div",
-          { className: "inner" },
-          _react2.default.createElement(
-            "ul",
-            { className: "icons" },
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "#", className: "icon fa-twitter" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "label" },
-                  "Twitter"
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "#", className: "icon fa-github" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "label" },
-                  "Github"
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "#", className: "icon fa-dribbble" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "label" },
-                  "Dribbble"
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "#", className: "icon fa-envelope-o" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "label" },
-                  "Email"
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "ul",
-            { className: "copyright" },
-            _react2.default.createElement(
-              "li",
-              null,
-              "\xA9 Untitled"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "Design: ",
-              _react2.default.createElement(
-                "a",
-                { href: "http://html5up.net" },
-                "HTML5 UP"
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Footer;
-}(_react.Component);
-
-exports.default = Footer;
 
 /***/ })
 /******/ ]);
