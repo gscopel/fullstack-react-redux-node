@@ -8,3 +8,5 @@
 • Integrating Google Maps API for query params
 
 • Cloudinary API integration for image uploading and storage 
+
+• User authentication and profile management with bcrypt
